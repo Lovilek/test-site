@@ -1,0 +1,264 @@
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Навигация */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ff6347;
+}
+
+/* Хедер */
+.header {
+    height: 100vh;
+    background-image: url('header.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.header-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.header h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.header p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    padding: 15px 30px;
+    background-color: #ff6347;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e5533d;
+}
+
+/* Сервисы */
+.services {
+    padding: 100px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    padding: 30px;
+    width: 30%;
+    margin-bottom: 30px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card i {
+    font-size: 50px;
+    color: #ff6347;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Портфолио */
+.portfolio {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.portfolio-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    position: relative;
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.5s;
+}
+
+.overlay h3 {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.portfolio-item:hover .overlay {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.portfolio-item:hover .overlay h3 {
+    opacity: 1;
+}
+
+/* Контактная форма */
+.contact {
+    padding: 100px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    padding: 15px 30px;
+    background-color: #ff6347;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+}
+
+#contact-form button:hover {
+    background-color: #e5533d;
+}
+
+/* Футер */
+.footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+/* Адаптивность */
+@media screen and (max-width: 768px) {
+    .nav-links li {
+        margin-left: 10px;
+    }
+
+    .header h1 {
+        font-size: 36px;
+    }
+
+    .header p {
+        font-size: 18px;
+    }
+
+    .services .service-cards,
+    .portfolio .portfolio-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card,
+    .portfolio-item {
+        width: 80%;
+    }
+}
